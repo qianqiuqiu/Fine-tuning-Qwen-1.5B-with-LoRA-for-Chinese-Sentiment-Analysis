@@ -26,7 +26,7 @@ class DataConfig:
     train_split: str = "train"
     eval_split: str = "validation"
     test_split: str = "test"
-    preprocessing_num_workers: int = 1  # Windows 下减少 workers 避免内存问题
+    preprocessing_num_workers: int = 4
 
 
 @dataclass
@@ -69,7 +69,7 @@ class TrainingConfig:
     seed: int = 42
     bf16: bool = True  # 使用 BF16 混合精度
     fp16: bool = False
-    dataloader_num_workers: int = 0  # Windows 下设为 0 避免多进程内存问题
+    dataloader_num_workers: int = 4
     remove_unused_columns: bool = False
     
     # 梯度检查点（节省显存）
