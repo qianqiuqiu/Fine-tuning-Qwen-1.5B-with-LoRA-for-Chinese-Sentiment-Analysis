@@ -1,7 +1,7 @@
 [project]
 name = "fine-tuning-qwen-1-5b-with-lora-for-chinese-sentiment-analysis"
 version = "0.1.0"
-description = "Add your description here"
+description = "个人项目：使用LoRA对Qwen-1.5B模型进行中文情感分析微调，代码结构很乱，仅供学习参考，复现的话可能你要debug非常多地方"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = []

@@ -8,6 +8,10 @@
 """
 
 import os
+
+# 修复 torch 导入卡死问题 (Intel MKL 库冲突)
+os.environ['KMP_DUPLICATE_LIB_OK'] = 'TRUE'
+
 import argparse
 import torch
 from typing import List, Dict, Any
@@ -48,8 +52,10 @@ class SentimentPredictor:
             trust_remote_code=True,
         )
         
+        # 确保设置 padding token
         if self.tokenizer.pad_token is None:
             self.tokenizer.pad_token = self.tokenizer.eos_token
+            self.tokenizer.pad_token_id = self.tokenizer.eos_token_id
         
         # 加载模型
         print(f"加载模型: {base_model_name}")
@@ -59,6 +65,10 @@ class SentimentPredictor:
             trust_remote_code=True,
             torch_dtype=torch.bfloat16,
         )
+        
+        # 确保模型配置中也设置了 pad_token_id
+        if self.model.config.pad_token_id is None:
+            self.model.config.pad_token_id = self.tokenizer.pad_token_id
         
         # 加载 LoRA
         if lora_path:
@@ -292,8 +302,14 @@ def parse_args():
     parser.add_argument(
         "--demo",
         action="store_true",
-        default=True,
+        default=False,
         help="运行示例演示",
+    )
+    parser.add_argument(
+        "--no-demo",
+        dest="demo",
+        action="store_false",
+        help="不运行示例演示",
     )
     
     return parser.parse_args()

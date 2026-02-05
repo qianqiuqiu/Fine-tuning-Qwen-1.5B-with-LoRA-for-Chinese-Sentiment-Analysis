@@ -1,5 +1,9 @@
 # 核心依赖
-torch>=2.0.0
+# PyTorch 2.10.0+cu128 用于 RTX 5070 (Blackwell sm_120)
+# 安装命令：pip install torch==2.10.0+cu128 torchvision==0.25.0+cu128 torchaudio==2.10.0+cu128 --index-url https://download.pytorch.org/whl/cu128
+torch==2.10.0+cu128
+torchvision==0.25.0+cu128
+torchaudio==2.10.0+cu128
 transformers>=4.36.0
 datasets>=2.14.0
 peft>=0.7.0

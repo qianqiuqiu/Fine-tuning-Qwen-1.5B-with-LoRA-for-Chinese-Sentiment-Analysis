@@ -1,0 +1,34 @@
+{
+  "qwen_base_frozen": {
+    "key": "qwen_base_frozen",
+    "name": "Qwen-1.5B 冻结 + LoRA分类头",
+    "description": "冻结的基础Qwen模型 + LoRA训练后的分类头（测试分类头能力）",
+    "metrics": {
+      "accuracy": 0.512,
+      "precision": 0.5111111111111111,
+      "recall": 0.9921568627450981,
+      "f1": 0.6746666666666666,
+      "negative_recall": 0.012244897959183673,
+      "positive_recall": 0.9921568627450981,
+      "auc_roc": 0.5511644657863146,
+      "avg_inference_time_ms": 5.765347480773926,
+      "qps": 173.4500831623357
+    }
+  },
+  "qwen_lora": {
+    "key": "qwen_lora",
+    "name": "Qwen-1.5B + LoRA微调",
+    "description": "LoRA微调的完整模型（基础模型+分类头都经过微调）",
+    "metrics": {
+      "accuracy": 0.938,
+      "precision": 0.9705882352941176,
+      "recall": 0.9058823529411765,
+      "f1": 0.9371196754563894,
+      "negative_recall": 0.9714285714285714,
+      "positive_recall": 0.9058823529411765,
+      "auc_roc": 0.9771748699479792,
+      "avg_inference_time_ms": 4.918088912963867,
+      "qps": 203.33101285827584
+    }
+  }
+}

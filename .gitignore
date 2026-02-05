@@ -1,4 +1,6 @@
+# ============================================
 # Python
+# ============================================
 __pycache__/
 *.py[cod]
 *$py.class
@@ -16,74 +18,207 @@ parts/
 sdist/
 var/
 wheels/
+pip-wheel-metadata/
+share/python-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
 MANIFEST
-
-# Virtual environments
+.claude
+# ============================================
+# Virtual Environments
+# ============================================
 venv/
 env/
 ENV/
 .venv/
+env.bak/
+venv.bak/
+pythonenv*/
 
+# ============================================
+# IDEs and Editors
+# ============================================
 # PyCharm
 .idea/
+*.iml
 
 # VS Code
 .vscode/
 *.code-workspace
 
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# ============================================
 # Jupyter Notebook
+# ============================================
 .ipynb_checkpoints
 *.ipynb
+jupyter_notebook_config.py
 
-# Environment variables
+# ============================================
+# Environment Variables & Secrets
+# ============================================
 .env
 .env.local
+.env.*.local
+*.secret
+secrets.json
 
-# Machine Learning / AI specific
+# ============================================
+# Machine Learning & Deep Learning
+# ============================================
+
+# Model files
 *.h5
+*.hdf5
 *.pkl
 *.pickle
 *.pth
+*.pt
 *.ckpt
-*.safetensors
-*.bin
+*.weights
+*.pb
+*.onnx
+*.tflite
+*.mlmodel
 
-# Model outputs and checkpoints
-outputs/
-outputs_*/
-logs/
-runs/
+
+
+# Checkpoints and Training Outputs
+
 checkpoints/
 checkpoint-*/
+runs/
+logs/
 lora_adapter/
 lora_adapter_*/
+saved_models/
+experiments/
+
+# Keep model_evaluation outputs (small JSON files)
+!model_evaluation/
+!model_evaluation/outputs/
+!model_evaluation/outputs/*.json
 
 # Weights & Biases
 wandb/
+wandb-metadata.json
 
-# Datasets (通常很大，不应提交到 git)
+# MLflow
+mlruns/
+mlartifacts/
+
+# ============================================
+# Datasets & Caches
+# ============================================
+# Large datasets
 data/*.csv
 data/*.json
 data/*.txt
 data/*.tsv
+data/*.parquet
 data/raw/
 data/processed/
-*.cache
+data/external/
+datasets/
+*.arrow
 
-# HuggingFace cache
+# Cache directories
+*.cache
 .cache/
 ~/.cache/huggingface/
+cache/
 
-# OS specific
-.DS_Store
+# HuggingFace specific
+.huggingface/
+hub/
+transformers_cache/
+
+# ============================================
+# OS Specific
+# ============================================
+# Windows
 Thumbs.db
-desktop.ini
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
 
-# Temporary files
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Linux
+*~
+.directory
+.Trash-*
+
+# ============================================
+# Temporary & Log Files
+# ============================================
 *.log
 *.tmp
 *.temp
+*.bak
+*.swp
+*.swo
 ~*
+*.orig
+
+# ============================================
+# Testing & Coverage
+# ============================================
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+.hypothesis/
+
+# ============================================
+# Documentation
+# ============================================
+docs/_build/
+site/
+.doctrees/
+
+# ============================================
+# Project Specific
+# ============================================
+# Ignore downloaded models (keep structure)
+models/
+pretrained/
+base_models/
+
+# Ignore large result files but keep structure
+results/
+*.csv
+*.xlsx
+
+# Keep essential config and small files
+!**/config.json
+!**/adapter_config.json
+!**/*.py
+!**/*.md
+!**/*.txt
+!requirements*.txt

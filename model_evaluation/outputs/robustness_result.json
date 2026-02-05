@@ -1,0 +1,560 @@
+{
+  "categories": {
+    "short_positive": {
+      "name": "短评正面",
+      "total": 5,
+      "labeled_samples": 5,
+      "samples": [
+        {
+          "text": "好！",
+          "true_label": 1,
+          "predicted": 1,
+          "confidence": 0.9296875,
+          "correct": true,
+          "description": "极短正面"
+        },
+        {
+          "text": "不错",
+          "true_label": 1,
+          "predicted": 1,
+          "confidence": 0.96484375,
+          "correct": true,
+          "description": "二字正面"
+        },
+        {
+          "text": "赞！",
+          "true_label": 1,
+          "predicted": 1,
+          "confidence": 1.0,
+          "correct": true,
+          "description": "单字正面加感叹号"
+        },
+        {
+          "text": "很棒",
+          "true_label": 1,
+          "predicted": 1,
+          "confidence": 0.98046875,
+          "correct": true,
+          "description": "两字正面"
+        },
+        {
+          "text": "👍",
+          "true_label": 1,
+          "predicted": 0,
+          "confidence": 0.12353515625,
+          "correct": false,
+          "description": "纯表情符号"
+        }
+      ],
+      "correct": 4,
+      "wrong": 1,
+      "accuracy": 0.8
+    },
+    "short_negative": {
+      "name": "短评负面",
+      "total": 5,
+      "labeled_samples": 5,
+      "samples": [
+        {
+          "text": "差",
+          "true_label": 0,
+          "predicted": 0,
+          "confidence": 0.1982421875,
+          "correct": true,
+          "description": "单字负面"
+        },
+        {
+          "text": "不好",
+          "true_label": 0,
+          "predicted": 1,
+          "confidence": 0.9609375,
+          "correct": false,
+          "description": "两字负面"
+        },
+        {
+          "text": "垃圾",
+          "true_label": 0,
+          "predicted": 1,
+          "confidence": 0.8203125,
+          "correct": false,
+          "description": "常见负面词"
+        },
+        {
+          "text": "太差了",
+          "true_label": 0,
+          "predicted": 0,
+          "confidence": 0.0002346038818359375,
+          "correct": true,
+          "description": "三字负面"
+        },
+        {
+          "text": "👎",
+          "true_label": 0,
+          "predicted": 1,
+          "confidence": 0.56640625,
+          "correct": false,
+          "description": "纯负面表情"
+        }
+      ],
+      "correct": 2,
+      "wrong": 3,
+      "accuracy": 0.4
+    },
+    "irony": {
+      "name": "反语",
+      "total": 5,
+      "labeled_samples": 5,
+      "samples": [
+        {
+          "text": "这服务真'好'",
+          "true_label": 0,
+          "predicted": 1,
+          "confidence": 1.0,
+          "correct": false,
+          "description": "引号反语"
+        },
+        {
+          "text": "呵呵，绝了",
+          "true_label": 0,
+          "predicted": 0,
+          "confidence": 0.02783203125,
+          "correct": true,
+          "description": "网络反语"
+        },
+        {
+          "text": "真是'感动'呢",
+          "true_label": 0,
+          "predicted": 1,
+          "confidence": 1.0,
+          "correct": false,
+          "description": "括号反语"
+        },
+        {
+          "text": "我就笑笑不说话",
+          "true_label": 0,
+          "predicted": 0,
+          "confidence": 0.248046875,
+          "correct": true,
+          "description": "常见反语句式"
+        },
+        {
+          "text": "您真'行'",
+          "true_label": 0,
+          "predicted": 1,
+          "confidence": 0.74609375,
+          "correct": false,
+          "description": "尊称反语"
+        }
+      ],
+      "correct": 2,
+      "wrong": 3,
+      "accuracy": 0.4
+    },
+    "mixed_emotion": {
+      "name": "混合情感",
+      "total": 4,
+      "labeled_samples": 0,
+      "samples": [
+        {
+          "text": "服务好但环境差",
+          "true_label": null,
+          "predicted": 1,
+          "confidence": 1.0,
+          "correct": null,
+          "description": "混合情感，无标准答案"
+        },
+        {
+          "text": "味道不错，就是价格贵了点",
+          "true_label": null,
+          "predicted": 1,
+          "confidence": 0.99609375,
+          "correct": null,
+          "description": "褒贬混合"
+        },
+        {
+          "text": "位置方便，但是停车很难",
+          "true_label": null,
+          "predicted": 1,
+          "confidence": 1.0,
+          "correct": null,
+          "description": "优缺点并存"
+        },
+        {
+          "text": "前三天住得很好，后三天很差",
+          "true_label": null,
+          "predicted": 0,
+          "confidence": 0.012939453125,
+          "correct": null,
+          "description": "时间跨度混合"
+        }
+      ],
+      "accuracy": null
+    },
+    "negative_negation": {
+      "name": "否定词堆叠",
+      "total": 5,
+      "labeled_samples": 5,
+      "samples": [
+        {
+          "text": "不是不满意",
+          "true_label": 1,
+          "predicted": 1,
+          "confidence": 0.73046875,
+          "correct": true,
+          "description": "双重否定表肯定"
+        },
+        {
+          "text": "不差",
+          "true_label": 1,
+          "predicted": 0,
+          "confidence": 0.236328125,
+          "correct": false,
+          "description": "否定负面词"
+        },
+        {
+          "text": "不后悔",
+          "true_label": 1,
+          "predicted": 1,
+          "confidence": 0.91015625,
+          "correct": true,
+          "description": "否定负面词"
+        },
+        {
+          "text": "还不错",
+          "true_label": 1,
+          "predicted": 1,
+          "confidence": 1.0,
+          "correct": true,
+          "description": "程度副词+否定负面"
+        },
+        {
+          "text": "不算差",
+          "true_label": 1,
+          "predicted": 1,
+          "confidence": 0.6875,
+          "correct": true,
+          "description": "动词+否定负面"
+        }
+      ],
+      "correct": 4,
+      "wrong": 1,
+      "accuracy": 0.8
+    },
+    "slang_positive": {
+      "name": "网络用语正面",
+      "total": 6,
+      "labeled_samples": 6,
+      "samples": [
+        {
+          "text": "yyds",
+          "true_label": 1,
+          "predicted": 0,
+          "confidence": 0.0361328125,
+          "correct": false,
+          "description": "永远的神"
+        },
+        {
+          "text": "绝绝子",
+          "true_label": 1,
+          "predicted": 1,
+          "confidence": 0.984375,
+          "correct": true,
+          "description": "网络流行语"
+        },
+        {
+          "text": "太强了",
+          "true_label": 1,
+          "predicted": 0,
+          "confidence": 0.002593994140625,
+          "correct": false,
+          "description": "常见夸奖"
+        },
+        {
+          "text": "牛逼",
+          "true_label": 1,
+          "predicted": 1,
+          "confidence": 0.73046875,
+          "correct": true,
+          "description": "网络口语"
+        },
+        {
+          "text": "给力",
+          "true_label": 1,
+          "predicted": 0,
+          "confidence": 0.267578125,
+          "correct": false,
+          "description": "早期网络用语"
+        },
+        {
+          "text": "666",
+          "true_label": 1,
+          "predicted": 0,
+          "confidence": 0.1728515625,
+          "correct": false,
+          "description": "数字网络用语"
+        }
+      ],
+      "correct": 2,
+      "wrong": 4,
+      "accuracy": 0.3333333333333333
+    },
+    "slang_negative": {
+      "name": "网络用语负面",
+      "total": 5,
+      "labeled_samples": 5,
+      "samples": [
+        {
+          "text": "摆烂",
+          "true_label": 0,
+          "predicted": 1,
+          "confidence": 0.97265625,
+          "correct": false,
+          "description": "网络负面词"
+        },
+        {
+          "text": "拉跨",
+          "true_label": 0,
+          "predicted": 1,
+          "confidence": 0.96875,
+          "correct": false,
+          "description": "网络口语"
+        },
+        {
+          "text": "太菜了",
+          "true_label": 0,
+          "predicted": 0,
+          "confidence": 0.00010251998901367188,
+          "correct": true,
+          "description": "网络贬义"
+        },
+        {
+          "text": "坑爹",
+          "true_label": 0,
+          "predicted": 0,
+          "confidence": 9.5367431640625e-06,
+          "correct": true,
+          "description": "常见网络抱怨"
+        },
+        {
+          "text": "无语",
+          "true_label": 0,
+          "predicted": 0,
+          "confidence": 0.041259765625,
+          "correct": true,
+          "description": "简洁负面"
+        }
+      ],
+      "correct": 3,
+      "wrong": 2,
+      "accuracy": 0.6
+    },
+    "emoji_positive": {
+      "name": "表情符号正面",
+      "total": 4,
+      "labeled_samples": 4,
+      "samples": [
+        {
+          "text": "😊 很好",
+          "true_label": 1,
+          "predicted": 1,
+          "confidence": 0.984375,
+          "correct": true,
+          "description": "笑脸+正面"
+        },
+        {
+          "text": "😄 体验很棒",
+          "true_label": 1,
+          "predicted": 1,
+          "confidence": 1.0,
+          "correct": true,
+          "description": "大笑脸"
+        },
+        {
+          "text": "👍 推荐！",
+          "true_label": 1,
+          "predicted": 1,
+          "confidence": 0.99609375,
+          "correct": true,
+          "description": "点赞"
+        },
+        {
+          "text": "❤️ 很喜欢",
+          "true_label": 1,
+          "predicted": 1,
+          "confidence": 0.71484375,
+          "correct": true,
+          "description": "爱心表情"
+        }
+      ],
+      "correct": 4,
+      "wrong": 0,
+      "accuracy": 1.0
+    },
+    "emoji_negative": {
+      "name": "表情符号负面",
+      "total": 4,
+      "labeled_samples": 4,
+      "samples": [
+        {
+          "text": "😠 很差",
+          "true_label": 0,
+          "predicted": 0,
+          "confidence": 0.000209808349609375,
+          "correct": true,
+          "description": "愤怒脸+负面"
+        },
+        {
+          "text": "😞 太失望了",
+          "true_label": 0,
+          "predicted": 0,
+          "confidence": 0.006439208984375,
+          "correct": true,
+          "description": "失望脸"
+        },
+        {
+          "text": "👎 不推荐",
+          "true_label": 0,
+          "predicted": 0,
+          "confidence": 0.0026702880859375,
+          "correct": true,
+          "description": "点踩"
+        },
+        {
+          "text": "😡 气死我了",
+          "true_label": 0,
+          "predicted": 0,
+          "confidence": 0.0017852783203125,
+          "correct": true,
+          "description": "愤怒表情"
+        }
+      ],
+      "correct": 4,
+      "wrong": 0,
+      "accuracy": 1.0
+    },
+    "typo": {
+      "name": "错别字",
+      "total": 4,
+      "labeled_samples": 4,
+      "samples": [
+        {
+          "text": "非常不措",
+          "true_label": 1,
+          "predicted": 0,
+          "confidence": 0.10693359375,
+          "correct": false,
+          "description": "错别字：不措->不错"
+        },
+        {
+          "text": "挺哈皮的",
+          "true_label": 1,
+          "predicted": 0,
+          "confidence": 0.2021484375,
+          "correct": false,
+          "description": "错别字：哈皮->happy"
+        },
+        {
+          "text": "太差了",
+          "true_label": 0,
+          "predicted": 0,
+          "confidence": 0.00023746490478515625,
+          "correct": true,
+          "description": "错别字：差->差"
+        },
+        {
+          "text": "服务太圾了",
+          "true_label": 0,
+          "predicted": 0,
+          "confidence": 0.002288818359375,
+          "correct": true,
+          "description": "错别字：圾->垃圾"
+        }
+      ],
+      "correct": 2,
+      "wrong": 2,
+      "accuracy": 0.5
+    },
+    "long_text": {
+      "name": "长评",
+      "total": 2,
+      "labeled_samples": 2,
+      "samples": [
+        {
+          "text": "这次入住体验非常棒，从进门开始就能感受到员工的热情接待，办理入住手续效率很高，没有等待太久。房间干净整洁，床品舒适，卫生间打扫得非常干净，没有任何异味。酒店位置也很便利，周边有很多餐厅和商场，出...",
+          "true_label": 1,
+          "predicted": 1,
+          "confidence": 1.0,
+          "correct": true,
+          "description": "500字长正面评论"
+        },
+        {
+          "text": "这次住宿体验实在太差了，首先前台服务态度冷淡，办理入住等了近半个小时。到了房间发现设施陈旧，墙纸都有脱落，床单上还有污渍。隔音效果极差，走廊里说话声都能听到，根本无法休息。空调声音大且制冷效果不...",
+          "true_label": 0,
+          "predicted": 0,
+          "confidence": 5.029141902923584e-07,
+          "correct": true,
+          "description": "500字长负面评论"
+        }
+      ],
+      "correct": 2,
+      "wrong": 0,
+      "accuracy": 1.0
+    },
+    "edge_case": {
+      "name": "边缘情况",
+      "total": 5,
+      "labeled_samples": 0,
+      "samples": [
+        {
+          "text": "",
+          "true_label": null,
+          "predicted": 0,
+          "confidence": 0.314453125,
+          "correct": null,
+          "description": "空文本"
+        },
+        {
+          "text": "          ",
+          "true_label": null,
+          "predicted": 0,
+          "confidence": 0.03369140625,
+          "correct": null,
+          "description": "纯空格"
+        },
+        {
+          "text": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa...",
+          "true_label": null,
+          "predicted": 0,
+          "confidence": 0.18359375,
+          "correct": null,
+          "description": "超长文本"
+        },
+        {
+          "text": "？？？",
+          "true_label": null,
+          "predicted": 0,
+          "confidence": 0.283203125,
+          "correct": null,
+          "description": "纯问号"
+        },
+        {
+          "text": "！！！",
+          "true_label": null,
+          "predicted": 0,
+          "confidence": 0.2294921875,
+          "correct": null,
+          "description": "纯感叹号"
+        }
+      ],
+      "accuracy": null
+    }
+  },
+  "overall": {
+    "total_samples": 45,
+    "correct": 29,
+    "wrong": 16,
+    "accuracy": 0.6444444444444445,
+    "weighted_score": 0.6565079365079365,
+    "robustness_score": 62.955555555555556
+  }
+}

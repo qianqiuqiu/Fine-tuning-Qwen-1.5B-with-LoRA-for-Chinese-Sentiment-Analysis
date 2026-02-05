@@ -1,0 +1,12 @@
+# Model Evaluation Requirements
+# 模型评估工具依赖
+
+# Visualization
+seaborn>=0.12.0
+matplotlib>=3.7.0
+
+# HTML Report Templates
+jinja2>=3.1.0
+
+# Scipy for confidence intervals (optional)
+scipy>=1.10.0

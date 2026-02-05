@@ -10,6 +10,10 @@
 """
 
 import os
+
+# 修复 torch 导入卡死问题 (Intel MKL 库冲突)
+os.environ['KMP_DUPLICATE_LIB_OK'] = 'TRUE'
+
 import argparse
 import torch
 import numpy as np
