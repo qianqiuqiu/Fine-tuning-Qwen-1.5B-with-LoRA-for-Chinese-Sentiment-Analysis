@@ -12,7 +12,7 @@ from pathlib import Path
 project_root = Path(__file__).parent
 sys.path.insert(0, str(project_root))
 
-from model_evaluation.run_full_eval import FullEvaluator
+from evaluation.run_full_eval import FullEvaluator
 
 def main():
     print("=" * 70)
@@ -49,7 +49,7 @@ def main():
     print("=" * 70)
     
     # 输出文件位置
-    outputs_dir = project_root / "model_evaluation" / "outputs"
+    outputs_dir = project_root / "evaluation" / "outputs"
     print(f"\n生成的文件：")
     print(f"  - 评估报告: {outputs_dir / 'report.html'}")
     print(f"  - 基础指标: {outputs_dir / 'metrics.json'}")

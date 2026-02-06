@@ -3,8 +3,8 @@
 对训练好的模型进行全面评估
 
 使用方法:
-    python eval.py --model_path ./outputs/lora_adapter
-    python eval.py --model_path ./outputs/lora_adapter --dataset ChnSentiCorp
+    python scripts/eval.py --model_path ./experiments/classifier_head/lora_adapter
+    python scripts/eval.py --model_path ./experiments/classifier_head/lora_adapter --dataset ChnSentiCorp
 """
 
 import os

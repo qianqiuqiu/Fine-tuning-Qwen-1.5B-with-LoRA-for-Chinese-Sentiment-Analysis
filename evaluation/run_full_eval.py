@@ -24,7 +24,7 @@ from pathlib import Path
 # 处理直接运行时的相对导入问题
 if __name__ == "__main__" and __package__ is None:
     sys.path.insert(0, str(Path(__file__).parent.parent))
-    __package__ = "model_evaluation"
+    __package__ = "evaluation"
 
 import torch
 from datasets import load_dataset
@@ -41,7 +41,7 @@ try:
         get_device,
     )
 except ImportError:
-    from model_evaluation.utils import (
+    from evaluation.utils import (
         load_model_and_tokenizer,
         get_predictions_with_confidence,
         save_json,
@@ -303,7 +303,7 @@ class FullEvaluator:
             try:
                 from . import robustness_test
             except ImportError:
-                from model_evaluation import robustness_test
+                from evaluation import robustness_test
 
             tester = robustness_test.RobustnessTester(self.model, self.tokenizer)
             samples = tester.load_test_samples(str(
@@ -342,7 +342,7 @@ class FullEvaluator:
             try:
                 from . import benchmark
             except ImportError:
-                from model_evaluation import benchmark
+                from evaluation import benchmark
 
             # 限制样本数以加快测试速度
             test_texts = texts[:500]
@@ -498,7 +498,7 @@ class FullEvaluator:
             try:
                 from . import report_generator
             except ImportError:
-                from model_evaluation import report_generator
+                from evaluation import report_generator
 
             generator = report_generator.ReportGenerator()
 

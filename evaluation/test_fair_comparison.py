@@ -14,7 +14,7 @@ from pathlib import Path
 project_root = Path(__file__).parent
 sys.path.insert(0, str(project_root))
 
-from model_evaluation.run_full_eval import FullEvaluator
+from evaluation.run_full_eval import FullEvaluator
 
 
 def main():
@@ -23,7 +23,7 @@ def main():
     parser.add_argument(
         "--model_path",
         type=str,
-        default="./outputs/lora_adapter",
+        default="./experiments/classifier_head/lora_adapter",
         help="LoRA适配器路径",
     )
     parser.add_argument(

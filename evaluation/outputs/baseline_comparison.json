@@ -55,5 +55,39 @@
       "avg_inference_time_ms": 86.39927864074707,
       "qps": 11.57417070758258
     }
+  },
+  "qwen_lora_label_scoring": {
+    "key": "qwen_lora_label_scoring",
+    "name": "Qwen-1.5B + LoRA微调 (Label Scoring)",
+    "description": "使用 CausalLM + LoRA 微调，训练时 prompt 部分 mask，仅对标签 token 计算 loss；推理时比较 '正面'/'负面' 的 logprob。生成式分类接口（复用 LM Head，不使用判别式分类头）",
+    "method": {
+      "type": "label_scoring / logprob",
+      "model_type": "AutoModelForCausalLM",
+      "task_type": "CAUSAL_LM",
+      "prompt_template": "评论：{text}\n情感倾向：",
+      "candidate_labels": {
+        "0": "负面",
+        "1": "正面"
+      },
+      "label_token_ids": {
+        "0": [103276],
+        "1": [106557]
+      },
+      "training": "LoRA 应用于 q/k/v/o/gate/up/down_proj，仅标签 token 参与 loss 计算",
+      "inference": "拼接 prompt + 每个候选标签，计算标签 token 的条件 log-prob 之和，取 argmax"
+    },
+    "metrics": {
+      "accuracy": 0.9575,
+      "precision": 0.9588138385502472,
+      "recall": 0.9572368421052632,
+      "f1": 0.9580246913580247,
+      "test_loss": 0.2015717625617981
+    },
+    "training_info": {
+      "epochs": 3.0,
+      "train_loss": 0.8367014603482352,
+      "train_runtime_seconds": 3350.3319,
+      "train_samples_per_second": 8.596
+    }
   }
 }

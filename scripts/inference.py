@@ -3,8 +3,8 @@
 使用训练好的模型进行情感预测
 
 使用方法:
-    python inference.py --model_path ./outputs/lora_adapter --text "这个产品非常好用！"
-    python inference.py --model_path ./outputs/lora_adapter --interactive
+    python scripts/inference.py --model_path ./experiments/classifier_head/lora_adapter --text "这个产品非常好用！"
+    python scripts/inference.py --model_path ./experiments/classifier_head/lora_adapter --interactive
 """
 
 import os
@@ -279,7 +279,7 @@ def parse_args():
     parser.add_argument(
         "--model_path",
         type=str,
-        default="./outputs/lora_adapter",
+        default="./experiments/classifier_head/lora_adapter",
         help="LoRA 适配器路径",
     )
     parser.add_argument(

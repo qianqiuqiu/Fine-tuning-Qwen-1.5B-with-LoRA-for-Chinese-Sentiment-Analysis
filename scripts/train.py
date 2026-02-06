@@ -478,7 +478,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--output_dir",
         type=str,
-        default="./outputs",
+        default="./experiments/classifier_head",
         help="输出目录",
     )
     parser.add_argument(

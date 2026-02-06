@@ -25,7 +25,7 @@ from pathlib import Path
 # 处理直接运行时的相对导入问题
 if __name__ == "__main__" and __package__ is None:
     sys.path.insert(0, str(Path(__file__).parent.parent))
-    __package__ = "model_evaluation"
+    __package__ = "evaluation"
 
 import torch
 import torch.nn.functional as F
@@ -35,7 +35,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 try:
     from .utils import save_json, ensure_output_dir, get_device, get_torch_dtype
 except ImportError:
-    from model_evaluation.utils import save_json, ensure_output_dir, get_device, get_torch_dtype
+    from evaluation.utils import save_json, ensure_output_dir, get_device, get_torch_dtype
 
 from sklearn.metrics import (
     accuracy_score,
